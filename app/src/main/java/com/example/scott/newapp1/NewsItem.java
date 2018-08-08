@@ -16,7 +16,7 @@ public class NewsItem {
     private String mUrl;
 
     //Author of the article
-    private String mAuthor;
+    //private String mAuthor;
 
     /**
      * Builds a new News Item object
@@ -27,12 +27,12 @@ public class NewsItem {
      * @param url the web address of the article
      * @param author of the article
      */
-    public NewsItem(String date, String title, String section, String url, String author) {
+    public NewsItem(String date, String title, String section, String url) {
         mDate = date;
         mTitle = title;
         mSection = section;
         mUrl = url;
-        mAuthor = author;
+        //mAuthor = author;
     }
 
     //public get methods used to acquire private data
@@ -52,7 +52,7 @@ public class NewsItem {
         return mUrl;
     }
 
-    public String getAuthor() {
-    return mAuthor;
-    }
+    //public String getAuthor() {
+    //return mAuthor;
+    //}
 }

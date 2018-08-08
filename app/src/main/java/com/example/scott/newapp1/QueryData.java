@@ -2,11 +2,9 @@ package com.example.scott.newapp1;
 
 import android.text.TextUtils;
 import android.util.Log;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -17,7 +15,7 @@ import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.jar.JarException;
+
 
 
 public final class QueryData {
@@ -147,12 +145,12 @@ public final class QueryData {
                 String pubDate = currentNewsItem.getString("webPublicationDate");
                 String title = currentNewsItem.getString("webTitle");
                 String url = currentNewsItem.getString("webUrl");
-                String author = currentNewsItem.getString("");
+                //String author = currentNewsItem.getString("author");
 
                 //Parse the date from the webPublicationDate element, this removes the time stamp section
                 String[] date = pubDate.split("T");
 
-                NewsItem newstory = new NewsItem(date[0], title, section, url, author);
+                NewsItem newstory = new NewsItem(date[0], title, section, url);
                 newstories.add(newstory);
 
             }

@@ -40,7 +40,6 @@
         style="@style/OtherText"
         tools:text="Politics" />
 
-
     <TextView
         android:id="@+id/author"
         android:layout_width="0dp"

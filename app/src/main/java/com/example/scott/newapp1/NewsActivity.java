@@ -2,14 +2,12 @@ package com.example.scott.newapp1;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +24,7 @@ public class NewsActivity extends AppCompatActivity implements LoaderCallbacks<L
     /**
      * URL for News information from the from The Guardian API
      */
-    private static final String GUARDIAN_URL = "https://content.guardianapis.com/search?q=ufc&api-key=fa889bfa-3afd-443b-bf4a-46e363835da5";
+    private static final String GUARDIAN_URL = "https://content.guardianapis.com/search?q=ufc%20AND%20fashion&api-key=fa889bfa-3afd-443b-bf4a-46e363835da5";
 
     //Only really needed if using more than one loader
     private static final int NEWSITEM_LOADER_ID = 1;
@@ -91,7 +89,7 @@ public class NewsActivity extends AppCompatActivity implements LoaderCallbacks<L
         // Clear the adapter of previous earthquake data
         mAdapter.clear();
 
-        // If there is a valid list of articless, then add them to the adapter's
+        // If there is a valid list of articles, then add them to the adapter's
         // data set. This will trigger the ListView to update.
         if (newstories != null && !newstories.isEmpty()) {
             mAdapter.addAll(newstories);
