@@ -145,13 +145,16 @@ public final class QueryData {
                 String pubDate = currentNewsItem.getString("webPublicationDate");
                 String title = currentNewsItem.getString("webTitle");
                 String url = currentNewsItem.getString("webUrl");
+                //grab the fields JSONObject to pull the byline from to get the author
+                JSONObject authorName = currentNewsItem.getJSONObject("fields");
+                String author = authorName.getString("byline");
+
 
                 //Parse the date from the webPublicationDate element, this removes the time stamp section
                 String[] date = pubDate.split("T");
 
-                NewsItem newstory = new NewsItem(date[0], title, section, url);
-                newstories.add(newstory);
-
+                    NewsItem newstory = new NewsItem(date[0], title, section, url, author);
+                    newstories.add(newstory);
             }
 
         } catch (JSONException e) {

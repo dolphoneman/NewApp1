@@ -12,8 +12,11 @@ public class NewsItem {
     //Section the article came from
     private String mSection;
 
-    //Section of the web presents of the article
+    //Web page of the article
     private String mUrl;
+
+    //Who wrote the article
+    private String mAuthor;
 
     /**
      * Builds a new News Item object
@@ -23,11 +26,12 @@ public class NewsItem {
      * @param section the article came from
      * @param url the web address of the article
      */
-    public NewsItem(String date, String title, String section, String url) {
+    public NewsItem(String date, String title, String section, String url, String author) {
         mDate = date;
         mTitle = title;
         mSection = section;
         mUrl = url;
+        mAuthor = author;
     }
 
     //public get methods used to acquire private data
@@ -45,5 +49,9 @@ public class NewsItem {
 
     public String getUrl() {
         return mUrl;
+    }
+
+    public String getAuthor() {
+        return mAuthor;
     }
 }

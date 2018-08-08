@@ -22,9 +22,9 @@ import android.widget.TextView;
 public class NewsActivity extends AppCompatActivity implements LoaderCallbacks<List<NewsItem>> {
 
     /**
-     * URL for News information from the from The Guardian API
+     * URL for News information from the from The Guardian API with the byline added to get the author
      */
-    private static final String GUARDIAN_URL = "https://content.guardianapis.com/search?q=ufc%20AND%20fashion&api-key=fa889bfa-3afd-443b-bf4a-46e363835da5";
+    private static final String GUARDIAN_URL = "https://content.guardianapis.com/search?q=ufc%20AND%20fashion&show-fields=byline&api-key=fa889bfa-3afd-443b-bf4a-46e363835da5";
 
     //Only really needed if using more than one loader
     private static final int NEWSITEM_LOADER_ID = 1;
