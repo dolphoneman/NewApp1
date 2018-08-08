@@ -9,7 +9,12 @@
     </style>
 
     <style name="OtherText">
-        <item name="android:padding">8dp</item>
+        <item name="android:paddingLeft">64dp</item>
+        <item name="android:paddingStart">64dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
     </style>
     
 

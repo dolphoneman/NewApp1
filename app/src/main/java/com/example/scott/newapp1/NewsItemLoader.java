@@ -32,7 +32,6 @@ public class NewsItemLoader extends AsyncTaskLoader<List<NewsItem>> {
     @Override
     protected void onStartLoading() {
         forceLoad();
-
     }
 
     /**
@@ -43,8 +42,8 @@ public class NewsItemLoader extends AsyncTaskLoader<List<NewsItem>> {
         if (mUrl == null) {
             return null;
         }
-        // Perform the network request, parse the response, and extract a list of earthquakes.
-        List<NewsItem> earthquakes = QueryData.fetchNewsItems(mUrl);
-        return earthquakes;
+        // Perform the network request, parse the response, and extract a list of News Articles.
+        List<NewsItem> newstories = QueryData.fetchNewsItems(mUrl);
+        return newstories;
     }
 }

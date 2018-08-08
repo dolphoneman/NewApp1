@@ -40,10 +40,10 @@ public final class QueryData {
             Log.e(LOG_TAG, "Problem making the HTTP request.", e);
         }
 
-        // Extract relevant fields from the JSON response and create a list of {@link Earthquake}s
+        // Extract relevant fields from the JSON response and create a list of News Articles
         List<NewsItem> newstories = extractNewsItems(jsonResponse);
 
-        // Return the list of {@link Earthquake}s
+        // Return the list of News Articles
         return newstories;
     }
 
@@ -123,7 +123,7 @@ public final class QueryData {
     }
 
     public static List<NewsItem> extractNewsItems(String newsItemsJSON) {
-        //If the data string is empty, retun.
+        //If the data string is empty, return.
         if (TextUtils.isEmpty(newsItemsJSON)) {
             return null;
         }
@@ -145,7 +145,6 @@ public final class QueryData {
                 String pubDate = currentNewsItem.getString("webPublicationDate");
                 String title = currentNewsItem.getString("webTitle");
                 String url = currentNewsItem.getString("webUrl");
-                //String author = currentNewsItem.getString("author");
 
                 //Parse the date from the webPublicationDate element, this removes the time stamp section
                 String[] date = pubDate.split("T");
@@ -161,6 +160,5 @@ public final class QueryData {
 
         return newstories;
     }
-
 
 }

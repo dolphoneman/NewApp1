@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">New App 1</string>
+    <string name="whoops">Oh No! There was no data found. Try refreshing the screen.</string>
+    <string name="no_connection">We have lost the Internet connection. Try again.</string>
 </resources>

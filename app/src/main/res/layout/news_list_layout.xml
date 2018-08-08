@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    style="@style/OtherText">
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,13 +39,7 @@
         style="@style/OtherText"
         tools:text="Politics" />
 
-    <TextView
-        android:id="@+id/author"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        style="@style/OtherText"
-        tools:text="Joe Somebody" />
+
 
     </LinearLayout>
 
